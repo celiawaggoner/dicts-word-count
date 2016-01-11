@@ -31,7 +31,7 @@ def word_count(filename):
 
     #print word and word count
     
-    for word, count in word_count_dict.items():
+    for word, count in word_count_dict.iteritems():
         print "%s %d" % (word, count)
 
-word_count("test.txt")
+word_count("twain.txt")
