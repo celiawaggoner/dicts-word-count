@@ -25,8 +25,6 @@ def word_count(filename):
 
     all_words = [word.lower() for word in all_words]
 
-    # all_words = [word[:-1] for word in all_words if word[-1].isalpha() is False]
-
     new_all_words = []
 
     for word in all_words:
@@ -36,23 +34,19 @@ def word_count(filename):
             new_all_words.append(word)
         
     word_count_dict = Counter(new_all_words)
-    print word_count_dict
 
             # if word in word_count_dict:
             #     word_count_dict[word] += 1
             # else:
             #     word_count_dict[word] = 1
 
-    
     #loop over dictionary, print word and word count
     # for word, count in word_count_dict.iteritems():
-    # for word, count in word_count_dict.items():
-    #     print "%s %d" % (word, count)
+    for word, count in word_count_dict.items():
+        print "%s %d" % (word, count)
 
     #close the file
     the_file.close()
-
-
 
 #pass name of input file
 import sys
