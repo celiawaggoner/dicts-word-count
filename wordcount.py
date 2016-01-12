@@ -18,6 +18,10 @@ def word_count(filename):
         line = line.rstrip()
         words = line.split()
         for word in words:
+            word = word.lower()
+            if word[-1].isalpha() is False:
+                word = word[:-1]
+
             if word in word_count_dict:
                 word_count_dict[word] += 1
             else:
@@ -25,8 +29,10 @@ def word_count(filename):
 
     
     #loop over dictionary, print word and word count
-    for word, count in word_count_dict.iteritems():
-    #for word, count in word_count_dict.items():
+    # for word, count in word_count_dict.iteritems():
+    for word, count in word_count_dict.items():
         print "%s %d" % (word, count)
 
-word_count("twain.txt")
+    the_file.close()
+
+word_count("test.txt")
