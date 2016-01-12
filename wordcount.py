@@ -35,4 +35,11 @@ def word_count(filename):
 
     the_file.close()
 
-word_count("test.txt")
+
+
+#pass name of input file
+import sys
+
+filename = sys.argv[1]
+
+word_count(filename)
